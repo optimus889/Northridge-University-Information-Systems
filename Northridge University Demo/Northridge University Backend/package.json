@@ -1,0 +1,30 @@
+{
+  "name": "northridge-university-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Express + MongoDB backend for Northridge University Zero Trust Portal with AWS integration adapters.",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/scripts/seedDatabase.js",
+    "verify": "node src/scripts/verifyApi.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "latest",
+    "@aws-sdk/client-ses": "latest",
+    "@aws-sdk/s3-request-presigner": "latest",
+    "bcryptjs": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "helmet": "latest",
+    "jsonwebtoken": "latest",
+    "mongoose": "latest",
+    "morgan": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}

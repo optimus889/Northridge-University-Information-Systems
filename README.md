@@ -8,7 +8,6 @@ A full-stack university portal built with **React + Vite** (Frontend) and **Expr
 
 ```
 Northridge University/
-├── .env.example                        # Root-level environment variable template
 └── Northridge University Demo/
     ├── Northridge University Frontend/ # React + Vite frontend
     │   ├── src/
@@ -19,7 +18,7 @@ Northridge University/
     │   │   ├── aws/                    # AWS Cognito / S3 adapters
     │   │   └── routes/                 # React Router configuration
     │   ├── package.json
-    │   └── .env
+    │   └── .env.example
     └── Northridge University Backend/  # Express + MongoDB backend
         ├── src/
         │   ├── controllers/            # Business logic controllers
@@ -30,7 +29,7 @@ Northridge University/
         │   ├── scripts/                # Database seed & verification scripts
         │   └── server.js               # Server entry point
         ├── package.json
-        └── .env
+        └── .env.example
 ```
 
 ---
@@ -87,7 +86,7 @@ npm install
 
 **Configure environment variables:**
 
-The `.env` file ships with sensible development defaults and works out of the box. Edit it if you need to customize:
+The `.env.example` file ships with sensible development defaults and works out of the box. Edit it if you need to customize:
 
 ```env
 PORT=3000
@@ -148,7 +147,7 @@ npm install
 
 **Configure environment variables:**
 
-The `.env` file is pre-configured to match the default backend port — no changes needed:
+The `.env.example` file is pre-configured to match the default backend port — no changes needed:
 
 ```env
 # Set to true to use local mock data instead of calling the backend
@@ -221,7 +220,7 @@ npm run dev
 
 ## AWS Integration (Optional)
 
-The project includes built-in adapters for AWS S3 (file storage) and SES (email delivery), both disabled by default (`AWS_ENABLE_REAL_SERVICES=false`). To enable real AWS services, populate the following fields in the backend `.env` and ensure the associated IAM role has `s3:*` and `ses:SendEmail` permissions:
+The project includes built-in adapters for AWS S3 (file storage) and SES (email delivery), both disabled by default (`AWS_ENABLE_REAL_SERVICES=false`). To enable real AWS services, populate the following fields in the backend `.env.example` and ensure the associated IAM role has `s3:*` and `ses:SendEmail` permissions:
 
 ```env
 AWS_ENABLE_REAL_SERVICES=true
@@ -230,7 +229,7 @@ AWS_S3_BUCKET=your-bucket-name
 AWS_SES_FROM_EMAIL=noreply@yourdomain.com
 ```
 
-The frontend `.env` also reserves fields for a future AWS Cognito integration:
+The frontend `.env.example` also reserves fields for a future AWS Cognito integration:
 
 ```env
 VITE_AWS_REGION=us-east-1
@@ -246,10 +245,10 @@ VITE_COGNITO_CLIENT_ID=
 A: MongoDB is not running. Start it with `brew services start mongodb-community` (macOS) or `sudo systemctl start mongod` (Linux).
 
 **Q: Frontend shows a blank page or returns 404 errors?**  
-A: Verify that `VITE_API_BASE_URL` in the frontend `.env` matches the backend port (default: `3000`).
+A: Verify that `VITE_API_BASE_URL` in the frontend `.env,example` matches the backend port (default: `3000`).
 
 **Q: The seed script fails with `Cannot find module`?**  
 A: Make sure you have run `npm install` and that your current directory is `Northridge University Backend/`.
 
 **Q: Just want to view the UI without setting up a database?**  
-A: Set `VITE_USE_MOCKS=true` in the frontend `.env` and start only the frontend.
+A: Set `VITE_USE_MOCKS=true` in the frontend `.env,example` and start only the frontend.

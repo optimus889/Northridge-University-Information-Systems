@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+data/
+database/
+mongodb-data/
+dump/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Mac system files
+.DS_Store
+__MACOSX/
+
+# Editor files
+.vscode/
+.idea/
+
+# Git folder should not be inside uploaded zip
+.git/
+
+# Security / keys
+*.pem
+*.key
+*.crt

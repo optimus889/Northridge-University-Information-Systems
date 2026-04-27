@@ -18,6 +18,7 @@ Northridge University/
     │   │   ├── aws/                    # AWS Cognito / S3 adapters
     │   │   └── routes/                 # React Router configuration
     │   ├── package.json
+    │   ├── package-lock.json
     │   └── .env.example
     └── Northridge University Backend/  # Express + MongoDB backend
         ├── src/
@@ -29,6 +30,7 @@ Northridge University/
         │   ├── scripts/                # Database seed & verification scripts
         │   └── server.js               # Server entry point
         ├── package.json
+        ├── package-lock.json
         └── .env.example
 ```
 
